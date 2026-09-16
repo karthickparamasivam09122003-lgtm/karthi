@@ -3,25 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - My Website</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Technology Website</title>
+    <style>
+        /* இது CSS - வடிவமைப்புக்கான கோட் */
+        
+        /* முழு பாடியின் பின்னணி வெள்ளையாக இருக்க */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff; /* White Background */
+            font-family: Arial, sans-serif;
+        }
+
+        /* மெனு பார் (Navigation Bar) வடிவமைப்பு */
+        .navbar {
+            background-color: #007bff; /* நீல நிறம் (Blue) */
+            padding: 15px 0; /* மேலும் கீழும் இடைவெளி */
+            text-align: center; /* எழுத்துக்களை நடுவில் வைக்க */
+        }
+
+        /* மெனுவில் உள்ள லிங்க்குகள் (Text) */
+        .navbar a {
+            color: white; /* எழுத்து நிறம் வெள்ளை */
+            text-decoration: none; /* அடிக்கோடு (Underline) நீக்க */
+            margin: 0 20px; /* எழுத்துக்களுக்கு இடையே இடைவெளி */
+            font-size: 14px;
+            font-weight: bold;
+            text-transform: uppercase; /* எல்லாம் Capital Letters-ல் இருக்க */
+        }
+
+        /* மவுஸ் வைக்கும்போது நிறம் மாற */
+        .navbar a:hover {
+            color: #ffd700; /* Gold color on hover */
+        }
+    </style>
 </head>
 <body>
-    <nav>
-        <a href="index.html" class="active">Home</a>
-        <a href="about.html">About</a>
-    </nav>
 
-    <div class="container">
-        <h1>Welcome to Home Page 🏠</h1>
-        <p>Ithu first page. Nee inga enna venum na athu add panniko.</p>
-        <button onclick="showMessage()">Click Me</button>
+    <!-- இது தான் மெனு பார் -->
+    <div class="navbar">
+        <a href="#">NEWS</a>
+        <a href="#">COMPUTER</a>
+        <a href="#">LAPTOP</a>
+        <a href="#">MOBILES</a>
+        <a href="#">TABLETS</a>
+        <a href="#">GADGETS</a>
+        <a href="#">TECHNOLOGY</a>
     </div>
 
-    <script>
-        function showMessage() {
-            alert("Home page la click pannita! 🎉");
-        }
-    </script>
+    <!-- கீழே உள்ள கண்டெண்ட் (Content) -->
+    <div style="padding: 20px;">
+        <h1>Welcome to Technology News</h1>
+        <p>This is a white background page.</p>
+    </div>
+
 </body>
 </html>
