@@ -3,219 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Projects</title>
-    <!-- Font Awesome Icons (சோஷியல் மீடியா ஐகான்களுக்கு) -->
+    <title>eMarket Mobile View</title>
+    <!-- CSS ஃபைலை இங்கே இணைக்கிறோம் -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome Icons (ஐகான்களுக்காக) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <style>
-        /* --- General Reset --- */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-
-        body {
-            background-color: #f4f4f4; /* Overall page background */
-        }
-
-        /* --- 1. Top Bar (கருப்பு நிற பகுதி) --- */
-        .top-bar {
-            background-color: #222; /* Dark Black/Grey */
-            color: white;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 40px;
-            font-size: 13px;
-        }
-
-        .top-left {
-            display: flex;
-            align-items: center;
-        }
-
-        .social-icons {
-            display: flex;
-            gap: 15px;
-            padding: 0 20px;
-            color: #ccc;
-        }
-
-        .trending-btn {
-            background-color: #007bff; /* Blue */
-            color: white;
-            padding: 0 20px;
-            height: 40px;
-            line-height: 40px;
-            font-weight: bold;
-            text-transform: uppercase;
-        }
-
-        .trending-text {
-            padding-left: 15px;
-            color: #333;
-            background: white; /* இது படத்தில் வெள்ளையாக இருக்கும் */
-            height: 40px;
-            line-height: 40px;
-            padding-right: 20px;
-        }
-
-        .top-right {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            padding-right: 20px;
-        }
-
-        .top-right a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .phone-number {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            background-color: #333;
-            padding: 0 15px;
-            height: 40px;
-            line-height: 40px;
-        }
-
-        /* --- 2. Logo Area (வெள்ளை நிற பகுதி) --- */
-        .logo-section {
-            background-color: #ffffff; /* White Background */
-            padding: 20px 50px;
-            border-bottom: 1px solid #ddd;
-        }
-
-        .logo {
-            font-size: 32px;
-            font-weight: bold;
-            color: #ff4500; /* Orange/Red color for "Student" */
-            font-family: 'Georgia', serif;
-        }
-
-        .logo span {
-            color: #333; /* Dark color for "Projects" */
-        }
-
-        .tagline {
-            font-size: 12px;
-            color: #555;
-            font-style: italic;
-            margin-top: -5px;
-        }
-
-        /* --- 3. Main Navigation (அடர் சாம்பல் நிற பகுதி) --- */
-        .main-nav {
-            background-color: #333333; /* Dark Grey */
-            display: flex;
-            align-items: center;
-            padding: 0 50px;
-        }
-
-        .home-icon {
-            background-color: #007bff; /* Blue */
-            padding: 15px 20px;
-            color: white;
-            font-size: 18px;
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            margin-left: 20px;
-            flex-grow: 1;
-        }
-
-        .nav-links li {
-            position: relative;
-        }
-
-        .nav-links a {
-            display: block;
-            color: white;
-            text-decoration: none;
-            padding: 15px 20px;
-            font-size: 14px;
-            font-weight: bold;
-            text-transform: uppercase;
-        }
-
-        .nav-links a:hover {
-            background-color: #444;
-        }
-
-        /* Dropdown Arrow (மெனுவில் உள்ள சிறிய அம்புக்குறி) */
-        .arrow-down::after {
-            content: '\25BC'; /* Down Arrow Code */
-            font-size: 10px;
-            margin-left: 5px;
-        }
-
-        .search-icon {
-            color: white;
-            font-size: 18px;
-            cursor: pointer;
-        }
-
-    </style>
 </head>
 <body>
 
-    <!-- 1. TOP BAR -->
-    <div class="top-bar">
-        <div class="top-left">
-            <div class="social-icons">
-                <i class="fab fa-facebook-f"></i>
-                <i class="fab fa-twitter"></i>
-                <i class="fab fa-youtube"></i>
-                <i class="fab fa-whatsapp"></i>
-            </div>
-            <div class="trending-btn">TRENDING</div>
-            <div class="trending-text">Online Eye Care System</div>
+    <!-- மொபைல் கண்டெய்னர் -->
+    <div class="mobile-container">
+
+        <!-- 1. Header -->
+        <div class="header">
+            <i class="fas fa-arrow-left back-icon"></i>
+            <div class="title">eMarket</div>
+            <i class="fas fa-shopping-cart cart-icon"></i>
         </div>
-        <div class="top-right">
-            <a href="#">About</a>
-            <a href="#">Contact</a>
-            <span>|</span>
-            <a href="#">My Downloads</a>
-            <a href="#">Cart</a>
-            <div class="phone-number">
-                <i class="fas fa-phone-alt"></i> +91-9481545735
+
+        <!-- 2. Search Bar -->
+        <div class="search-bar">
+            <span>Categories</span>
+            <div class="search-right">
+                <i class="fas fa-search"></i>
+                <span>Search...</span>
             </div>
         </div>
-    </div>
 
-    <!-- 2. LOGO SECTION -->
-    <div class="logo-section">
-        <div class="logo">Student<span>Projects</span></div>
-        <div class="tagline">Academic Project Guidance provider</div>
-    </div>
+        <!-- 3. Banner -->
+        <div class="banner">
+            <h2>Grab deals</h2>
+            <h1>50% off</h1>
+        </div>
 
-    <!-- 3. MAIN NAVIGATION -->
-    <nav class="main-nav">
-        <div class="home-icon">
-            <i class="fas fa-home"></i>
+        <!-- 4. Category Grid -->
+        <div class="category-grid">
+            <!-- Row 1 -->
+            <div class="grid-item">
+                <i class="fas fa-tshirt"></i>
+                <p>Clothing</p>
+            </div>
+            <div class="grid-item">
+                <i class="fas fa-mobile-alt"></i>
+                <p>Phones</p>
+            </div>
+            <div class="grid-item">
+                <i class="fas fa-camera"></i>
+                <p>Cameras</p>
+            </div>
+
+            <!-- Row 2 -->
+            <div class="grid-item">
+                <i class="fas fa-glasses"></i>
+                <p>Glasses</p>
+            </div>
+            <div class="grid-item">
+                <i class="fas fa-hat-cowboy"></i>
+                <p>Hats</p>
+            </div>
+            <div class="grid-item">
+                <i class="fas fa-shoe-prints"></i>
+                <p>Shoes</p>
+            </div>
+
+            <!-- Row 3 -->
+            <div class="grid-item">
+                <i class="fas fa-couch"></i>
+                <p>Furniture</p>
+            </div>
+            <div class="grid-item">
+                <i class="fas fa-seedling"></i>
+                <p>Plants</p>
+            </div>
+            <div class="grid-item">
+                <i class="fas fa-layer-group"></i>
+                <p>Towels</p>
+            </div>
         </div>
-        <ul class="nav-links">
-            <li><a href="#" class="arrow-down">Project Report</a></li>
-            <li><a href="#">Android</a></li>
-            <li><a href="#">ASP.NET</a></li>
-            <li><a href="#">PHP</a></li>
-            <li><a href="#">VB.NET</a></li>
-            <li><a href="#">Java</a></li>
-            <li><a href="#">Project Ideas</a></li>
-            <li><a href="#" class="arrow-down">Others</a></li>
-        </ul>
-        <div class="search-icon">
-            <i class="fas fa-search"></i>
-        </div>
-    </nav>
+
+    </div>
 
 </body>
 </html>
