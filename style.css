@@ -1,76 +1,156 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
 
-body {
-    background: linear-gradient(135deg, #667eea, #764ba2);
-    min-height: 100vh;
-    color: #fff;
-}
+        /* --- General Reset --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
 
-nav {
-    background: rgba(0, 0, 0, 0.3);
-    padding: 15px;
-    text-align: center;
-}
+        body {
+            background-color: #f4f4f4; /* Overall page background */
+        }
 
-nav a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 15px;
-    padding: 10px 20px;
-    border-radius: 5px;
-    transition: 0.3s;
-    font-weight: bold;
-}
+        /* --- 1. Top Bar (கருப்பு நிற பகுதி) --- */
+        .top-bar {
+            background-color: #222; /* Dark Black/Grey */
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 40px;
+            font-size: 13px;
+        }
 
-nav a:hover, nav a.active {
-    background: #fff;
-    color: #764ba2;
-}
+        .top-left {
+            display: flex;
+            align-items: center;
+        }
 
-.container {
-    max-width: 800px;
-    margin: 60px auto;
-    padding: 40px;
-    background: rgba(255, 255, 255, 0.15);
-    border-radius: 15px;
-    text-align: center;
-    backdrop-filter: blur(10px);
-}
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            padding: 0 20px;
+            color: #ccc;
+        }
 
-h1 {
-    margin-bottom: 20px;
-    font-size: 2.5em;
-}
+        .trending-btn {
+            background-color: #007bff; /* Blue */
+            color: white;
+            padding: 0 20px;
+            height: 40px;
+            line-height: 40px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
 
-p, ul {
-    font-size: 1.2em;
-    line-height: 1.8;
-}
+        .trending-text {
+            padding-left: 15px;
+            color: #333;
+            background: white; /* இது படத்தில் வெள்ளையாக இருக்கும் */
+            height: 40px;
+            line-height: 40px;
+            padding-right: 20px;
+        }
 
-ul {
-    list-style: none;
-    margin-top: 20px;
-}
+        .top-right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding-right: 20px;
+        }
 
-button {
-    margin-top: 20px;
-    padding: 12px 30px;
-    font-size: 1em;
-    background: #fff;
-    color: #764ba2;
-    border: none;
-    border-radius: 25px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: 0.3s;
-}
+        .top-right a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
 
-button:hover {
-    transform: scale(1.05);
-    background: #ffd700;
-}
+        .phone-number {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            background-color: #333;
+            padding: 0 15px;
+            height: 40px;
+            line-height: 40px;
+        }
+
+        /* --- 2. Logo Area (வெள்ளை நிற பகுதி) --- */
+        .logo-section {
+            background-color: #ffffff; /* White Background */
+            padding: 20px 50px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .logo {
+            font-size: 32px;
+            font-weight: bold;
+            color: #ff4500; /* Orange/Red color for "Student" */
+            font-family: 'Georgia', serif;
+        }
+
+        .logo span {
+            color: #333; /* Dark color for "Projects" */
+        }
+
+        .tagline {
+            font-size: 12px;
+            color: #555;
+            font-style: italic;
+            margin-top: -5px;
+        }
+
+        /* --- 3. Main Navigation (அடர் சாம்பல் நிற பகுதி) --- */
+        .main-nav {
+            background-color: #333333; /* Dark Grey */
+            display: flex;
+            align-items: center;
+            padding: 0 50px;
+        }
+
+        .home-icon {
+            background-color: #007bff; /* Blue */
+            padding: 15px 20px;
+            color: white;
+            font-size: 18px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            margin-left: 20px;
+            flex-grow: 1;
+        }
+
+        .nav-links li {
+            position: relative;
+        }
+
+        .nav-links a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 15px 20px;
+            font-size: 14px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .nav-links a:hover {
+            background-color: #444;
+        }
+
+        /* Dropdown Arrow (மெனுவில் உள்ள சிறிய அம்புக்குறி) */
+        .arrow-down::after {
+            content: '\25BC'; /* Down Arrow Code */
+            font-size: 10px;
+            margin-left: 5px;
+        }
+
+        .search-icon {
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
