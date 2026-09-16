@@ -3,59 +3,219 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Technology Website</title>
+    <title>Student Projects</title>
+    <!-- Font Awesome Icons (சோஷியல் மீடியா ஐகான்களுக்கு) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
-        /* இது CSS - வடிவமைப்புக்கான கோட் */
-        
-        /* முழு பாடியின் பின்னணி வெள்ளையாக இருக்க */
-        body {
+        /* --- General Reset --- */
+        * {
             margin: 0;
             padding: 0;
-            background-color: #ffffff; /* White Background */
+            box-sizing: border-box;
             font-family: Arial, sans-serif;
         }
 
-        /* மெனு பார் (Navigation Bar) வடிவமைப்பு */
-        .navbar {
-            background-color: #007bff; /* நீல நிறம் (Blue) */
-            padding: 15px 0; /* மேலும் கீழும் இடைவெளி */
-            text-align: center; /* எழுத்துக்களை நடுவில் வைக்க */
+        body {
+            background-color: #f4f4f4; /* Overall page background */
         }
 
-        /* மெனுவில் உள்ள லிங்க்குகள் (Text) */
-        .navbar a {
-            color: white; /* எழுத்து நிறம் வெள்ளை */
-            text-decoration: none; /* அடிக்கோடு (Underline) நீக்க */
-            margin: 0 20px; /* எழுத்துக்களுக்கு இடையே இடைவெளி */
+        /* --- 1. Top Bar (கருப்பு நிற பகுதி) --- */
+        .top-bar {
+            background-color: #222; /* Dark Black/Grey */
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 40px;
+            font-size: 13px;
+        }
+
+        .top-left {
+            display: flex;
+            align-items: center;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            padding: 0 20px;
+            color: #ccc;
+        }
+
+        .trending-btn {
+            background-color: #007bff; /* Blue */
+            color: white;
+            padding: 0 20px;
+            height: 40px;
+            line-height: 40px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .trending-text {
+            padding-left: 15px;
+            color: #333;
+            background: white; /* இது படத்தில் வெள்ளையாக இருக்கும் */
+            height: 40px;
+            line-height: 40px;
+            padding-right: 20px;
+        }
+
+        .top-right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding-right: 20px;
+        }
+
+        .top-right a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .phone-number {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            background-color: #333;
+            padding: 0 15px;
+            height: 40px;
+            line-height: 40px;
+        }
+
+        /* --- 2. Logo Area (வெள்ளை நிற பகுதி) --- */
+        .logo-section {
+            background-color: #ffffff; /* White Background */
+            padding: 20px 50px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .logo {
+            font-size: 32px;
+            font-weight: bold;
+            color: #ff4500; /* Orange/Red color for "Student" */
+            font-family: 'Georgia', serif;
+        }
+
+        .logo span {
+            color: #333; /* Dark color for "Projects" */
+        }
+
+        .tagline {
+            font-size: 12px;
+            color: #555;
+            font-style: italic;
+            margin-top: -5px;
+        }
+
+        /* --- 3. Main Navigation (அடர் சாம்பல் நிற பகுதி) --- */
+        .main-nav {
+            background-color: #333333; /* Dark Grey */
+            display: flex;
+            align-items: center;
+            padding: 0 50px;
+        }
+
+        .home-icon {
+            background-color: #007bff; /* Blue */
+            padding: 15px 20px;
+            color: white;
+            font-size: 18px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            margin-left: 20px;
+            flex-grow: 1;
+        }
+
+        .nav-links li {
+            position: relative;
+        }
+
+        .nav-links a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 15px 20px;
             font-size: 14px;
             font-weight: bold;
-            text-transform: uppercase; /* எல்லாம் Capital Letters-ல் இருக்க */
+            text-transform: uppercase;
         }
 
-        /* மவுஸ் வைக்கும்போது நிறம் மாற */
-        .navbar a:hover {
-            color: #ffd700; /* Gold color on hover */
+        .nav-links a:hover {
+            background-color: #444;
         }
+
+        /* Dropdown Arrow (மெனுவில் உள்ள சிறிய அம்புக்குறி) */
+        .arrow-down::after {
+            content: '\25BC'; /* Down Arrow Code */
+            font-size: 10px;
+            margin-left: 5px;
+        }
+
+        .search-icon {
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
     </style>
 </head>
 <body>
 
-    <!-- இது தான் மெனு பார் -->
-    <div class="navbar">
-        <a href="#">NEWS</a>
-        <a href="#">COMPUTER</a>
-        <a href="#">LAPTOP</a>
-        <a href="#">MOBILES</a>
-        <a href="#">TABLETS</a>
-        <a href="#">GADGETS</a>
-        <a href="#">TECHNOLOGY</a>
+    <!-- 1. TOP BAR -->
+    <div class="top-bar">
+        <div class="top-left">
+            <div class="social-icons">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-youtube"></i>
+                <i class="fab fa-whatsapp"></i>
+            </div>
+            <div class="trending-btn">TRENDING</div>
+            <div class="trending-text">Online Eye Care System</div>
+        </div>
+        <div class="top-right">
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <span>|</span>
+            <a href="#">My Downloads</a>
+            <a href="#">Cart</a>
+            <div class="phone-number">
+                <i class="fas fa-phone-alt"></i> +91-9481545735
+            </div>
+        </div>
     </div>
 
-    <!-- கீழே உள்ள கண்டெண்ட் (Content) -->
-    <div style="padding: 20px;">
-        <h1>Welcome to Technology News</h1>
-        <p>This is a white background page.</p>
+    <!-- 2. LOGO SECTION -->
+    <div class="logo-section">
+        <div class="logo">Student<span>Projects</span></div>
+        <div class="tagline">Academic Project Guidance provider</div>
     </div>
+
+    <!-- 3. MAIN NAVIGATION -->
+    <nav class="main-nav">
+        <div class="home-icon">
+            <i class="fas fa-home"></i>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#" class="arrow-down">Project Report</a></li>
+            <li><a href="#">Android</a></li>
+            <li><a href="#">ASP.NET</a></li>
+            <li><a href="#">PHP</a></li>
+            <li><a href="#">VB.NET</a></li>
+            <li><a href="#">Java</a></li>
+            <li><a href="#">Project Ideas</a></li>
+            <li><a href="#" class="arrow-down">Others</a></li>
+        </ul>
+        <div class="search-icon">
+            <i class="fas fa-search"></i>
+        </div>
+    </nav>
 
 </body>
 </html>
