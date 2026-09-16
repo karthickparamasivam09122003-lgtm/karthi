@@ -3,13 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Karthi</title>
+    <title>Home - My Website</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Karthi</h1>
-    <img width="200px" src="karthi1.avif" alt="">
-    <p>Karthick Paramasivam</p>
-    <p>Karthi</p>
-    <p>ka</p>
+    <nav>
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+    </nav>
+
+    <div class="container">
+        <h1>Welcome to Home Page 🏠</h1>
+        <p>Ithu first page. Nee inga enna venum na athu add panniko.</p>
+        <button onclick="showMessage()">Click Me</button>
+    </div>
+
+    <script>
+        function showMessage() {
+            alert("Home page la click pannita! 🎉");
+        }
+    </script>
 </body>
 </html>
