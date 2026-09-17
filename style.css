@@ -7,87 +7,91 @@
 }
 
 body {
-    background-color: #7b2c86; /* Purple Background */
+    /* Purple background color */
+    background-color: #7b2c86; 
     height: 100vh;
     display: flex;
+    flex-direction: column; /* Mela heading irukka */
     justify-content: center;
     align-items: center;
 }
 
-/* Main Container */
+/* Mela "Sign In" Title */
+.page-title {
+    color: white;
+    font-size: 32px;
+    margin-bottom: 20px; /* Login box-ku mela space */
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+/* Main Container Box */
 .login-container {
     display: flex;
     width: 900px;
-    height: 600px; /* Height konjam kooti iruken */
+    height: 550px;
     background-color: white;
     border-radius: 15px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
     overflow: hidden;
 }
 
-/* =========================================
-   LEFT SIDE (Logo & Icon Section)
-   ========================================= */
+/* Left Side - Logos Area */
 .left-side {
     flex: 1;
-    background-color: #f3e5f5; /* Light purple background */
+    background-color: #f3e5f5; /* Light purple tint */
     display: flex;
-    flex-direction: column; /* Vertical-a varum */
-    justify-content: center; /* Center la set aagum */
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    
-    /* ⭐ Mukkiyam: Icon kum Text kum naduvula Gap (Space) */
-    gap: 40px; 
-    
     padding: 40px;
     border-right: 1px solid #ddd;
 }
 
+/* Left side la irukura images-ku gap */
 .left-side img {
     max-width: 100%;
-    height: auto;
 }
 
-/* Text Logo (MY BANK) Size */
-.text-logo {
-    width: 260px; 
-}
-
-/* Bank Icon Size */
 .bank-icon {
-    width: 130px;
+    width: 120px;
+    margin-bottom: 40px; /* Icon and Text naduvula gap */
 }
 
-/* =========================================
-   RIGHT SIDE (Login Form Section)
-   ========================================= */
+.text-logo {
+    width: 250px; 
+}
+
+/* Right Side - Login Form Area */
 .right-side {
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 50px;
+    padding: 60px; /* Form-ku nalla padding */
     background-color: white;
 }
 
 .right-side h2 {
     color: #7b2c86;
-    margin-bottom: 25px;
-    text-align: center;
-    font-size: 30px;
+    margin-bottom: 30px;
+    text-align: center; /* Login heading center la */
+    font-size: 28px;
+    font-weight: bold;
 }
 
 /* Input Fields */
 .input-group {
-    margin-bottom: 18px; /* Fields kum naduvula space */
+    margin-bottom: 20px;
+    width: 100%; /* Full width */
 }
 
 .input-group label {
     display: block;
-    margin-bottom: 6px;
+    margin-bottom: 8px;
     color: #555;
     font-weight: 600;
-    font-size: 15px;
+    text-align: left; /* Label left align */
 }
 
 .input-group input {

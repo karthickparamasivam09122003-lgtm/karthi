@@ -3,45 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Bank - Login</title>
+    <title>My Bank - Sign In</title>
+    <!-- CSS file ah link panrom -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <!-- Mela "Sign In" Heading -->
+    <h1 class="page-title">Sign In</h1>
 
     <div class="login-container">
         
         <!-- Left Side: Logos -->
         <div class="left-side">
-            <!-- Unga first image (Text Logo) -->
-            <img src="images/mybank-text.png" alt="My Bank Logo" class="text-logo">
-            
-            <!-- Unga second image (Bank Icon) -->
+            <!-- Unga rendu image-um inga podunga -->
+            <!-- Gap varanum na, images-ku separate class kuduthuruken -->
             <img src="images/mybank-icon.png" alt="Bank Icon" class="bank-icon">
+            <img src="images/mybank-text.png" alt="My Bank Logo" class="text-logo">
         </div>
 
         <!-- Right Side: Login Form -->
         <div class="right-side">
             <h2>Login</h2>
             <form>
-                <!-- User ID Field -->
                 <div class="input-group">
                     <label for="userid">User ID</label>
                     <input type="text" id="userid" placeholder="Enter your User ID" required>
                 </div>
                 
-                <!-- Password Field -->
                 <div class="input-group">
                     <label for="password">Password</label>
                     <input type="password" id="password" placeholder="Enter your Password" required>
                 </div>
 
-                <!-- Sign In Field (Neenga kekurathu) -->
-                <div class="input-group">
-                    <label for="signin">Sign In</label>
-                    <input type="text" id="signin" placeholder="Enter your Sign In ID" required>
-                </div>
-
-                <!-- Login Button -->
                 <button type="submit" class="login-btn">Login</button>
             </form>
         </div>
