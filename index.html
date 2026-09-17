@@ -1,313 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Mobile Shop</title>
-
+    <title>My Bank - Login</title>
+    <!-- CSS file ah link panrom -->
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <!-- ================= HEADER ================= -->
-
-    <header class="header">
-
-        <div class="logo">
-            📱
-            <span>Mobile Shop</span>
+    <div class="login-container">
+        
+        <!-- Left Side: Logos -->
+        <div class="left-side">
+            <!-- Unga rendu image-um inga podunga -->
+            <img src="images/mybank-text.png" alt="My Bank Logo" class="text-logo">
+            <img src="images/mybank-icon.png" alt="Bank Icon" class="bank-icon">
         </div>
 
-        <nav class="navbar">
-            <a href="#">Home</a>
-            <a href="#">Mobiles</a>
-            <a href="#">Accessories</a>
-            <a href="#">Offers</a>
-            <a href="#">Services</a>
-            <a href="#">Contact</a>
-        </nav>
-
-        <div class="header-icons">
-            🔍
-            👤
-            🛒
-        </div>
-
-    </header>
-
-
-    <!-- ================= HERO SECTION ================= -->
-
-    <section class="hero">
-
-        <div class="hero-content">
-
-            <p class="small-text">
-                New Mobile... New Experience...
-            </p>
-
-            <h1>
-                Your Favorite Mobile
-                <span>At The Best Price!</span>
-            </h1>
-
-            <p>
-                Find the latest smartphones from top brands
-                at the best prices.
-            </p>
-
-            <button class="shop-button">
-                Shop Now →
-            </button>
-
-        </div>
-
-        <div class="hero-image">
-
-            <div class="phone phone1">📱</div>
-            <div class="phone phone2">📱</div>
-            <div class="phone phone3">📱</div>
-
-        </div>
-
-    </section>
-
-
-    <!-- ================= FEATURES ================= -->
-
-    <section class="features">
-
-        <div class="feature">
-            <div class="feature-icon">🛡️</div>
-            <h3>100% Genuine</h3>
-            <p>Original products</p>
-        </div>
-
-        <div class="feature">
-            <div class="feature-icon">🚚</div>
-            <h3>Fast Delivery</h3>
-            <p>Quick doorstep delivery</p>
-        </div>
-
-        <div class="feature">
-            <div class="feature-icon">🏷️</div>
-            <h3>Best Price</h3>
-            <p>Affordable prices</p>
-        </div>
-
-        <div class="feature">
-            <div class="feature-icon">🔒</div>
-            <h3>Secure Payment</h3>
-            <p>100% secure checkout</p>
-        </div>
-
-        <div class="feature">
-            <div class="feature-icon">🎧</div>
-            <h3>Customer Support</h3>
-            <p>Always here to help</p>
-        </div>
-
-    </section>
-
-
-    <!-- ================= POPULAR MOBILES ================= -->
-
-    <section class="products">
-
-        <div class="section-title">
-
-            <h2>Popular Mobiles</h2>
-
-            <p>
-                Explore our most popular smartphones
-            </p>
-
-        </div>
-
-
-        <div class="product-container">
-
-
-            <!-- PRODUCT 1 -->
-
-            <div class="product-card">
-
-                <div class="mobile-image">
-                    📱
+        <!-- Right Side: Login Form -->
+        <div class="right-side">
+            <h2>Login</h2>
+            <form>
+                <div class="input-group">
+                    <label for="userid">User ID</label>
+                    <input type="text" id="userid" placeholder="Enter your User ID" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter your Password" required>
                 </div>
 
-                <h3>Samsung Galaxy S24</h3>
-
-                <p class="price">
-                    ₹74,999
-                </p>
-
-                <button>
-                    🛒 Buy Now
-                </button>
-
-            </div>
-
-
-            <!-- PRODUCT 2 -->
-
-            <div class="product-card">
-
-                <div class="mobile-image">
-                    📱
-                </div>
-
-                <h3>iPhone 15</h3>
-
-                <p class="price">
-                    ₹79,900
-                </p>
-
-                <button>
-                    🛒 Buy Now
-                </button>
-
-            </div>
-
-
-            <!-- PRODUCT 3 -->
-
-            <div class="product-card">
-
-                <div class="mobile-image">
-                    📱
-                </div>
-
-                <h3>OnePlus 12</h3>
-
-                <p class="price">
-                    ₹64,999
-                </p>
-
-                <button>
-                    🛒 Buy Now
-                </button>
-
-            </div>
-
-
-            <!-- PRODUCT 4 -->
-
-            <div class="product-card">
-
-                <div class="mobile-image">
-                    📱
-                </div>
-
-                <h3>Xiaomi 14</h3>
-
-                <p class="price">
-                    ₹59,999
-                </p>
-
-                <button>
-                    🛒 Buy Now
-                </button>
-
-            </div>
-
-
-            <!-- PRODUCT 5 -->
-
-            <div class="product-card">
-
-                <div class="mobile-image">
-                    📱
-                </div>
-
-                <h3>Realme 12 Pro</h3>
-
-                <p class="price">
-                    ₹27,999
-                </p>
-
-                <button>
-                    🛒 Buy Now
-                </button>
-
-            </div>
-
-
-            <!-- PRODUCT 6 -->
-
-            <div class="product-card">
-
-                <div class="mobile-image">
-                    📱
-                </div>
-
-                <h3>Nothing Phone 2</h3>
-
-                <p class="price">
-                    ₹44,999
-                </p>
-
-                <button>
-                    🛒 Buy Now
-                </button>
-
-            </div>
-
+                <button type="submit" class="login-btn">Login</button>
+            </form>
         </div>
 
-    </section>
-
-
-    <!-- ================= OFFER ================= -->
-
-    <section class="offer">
-
-        <div>
-
-            <h2>
-                Exchange Your Old Mobile!
-            </h2>
-
-            <p>
-                Get exciting discounts when you exchange
-                your old smartphone.
-            </p>
-
-        </div>
-
-        <button>
-            Learn More →
-        </button>
-
-    </section>
-
-
-    <!-- ================= FOOTER ================= -->
-
-    <footer class="footer">
-
-        <div class="footer-logo">
-            📱 Mobile Shop
-        </div>
-
-        <div class="footer-links">
-
-            <a href="#">Home</a>
-            <a href="#">Mobiles</a>
-            <a href="#">Services</a>
-            <a href="#">Contact</a>
-
-        </div>
-
-        <p>
-            © 2026 Mobile Shop. All Rights Reserved.
-        </p>
-
-    </footer>
-
+    </div>
 
 </body>
 </html>
