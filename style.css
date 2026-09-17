@@ -36,21 +36,18 @@ body {
     border-right: 1px solid #ddd;
 }
 
-/* 🔥 Ithu thaan main change: Icon and Text-a otti otti vaika */
 .logo-group {
     display: flex;
     flex-direction: column; 
     align-items: center;    
-    gap: 0px;               /* Gap illama otti otti vaika */
+    gap: 0px;               
 }
 
-/* Text Logo */
 .text-logo {
     width: 220px; 
-    margin-top: -50px;      /* 🔥 Ithu thaan mukkiyam: Text-a mela izhuthu icon kita otti otti vaikum */
+    margin-top: -50px;      
 }
 
-/* Bank Icon */
 .bank-icon {
     width: 100px;
     margin-bottom: 0;       
@@ -100,9 +97,16 @@ body {
     box-shadow: 0 0 5px rgba(123, 44, 134, 0.3);
 }
 
+/* 🔥 Ithu thaan main change: Rendu button-um pakkathula pakkathula vaika */
+.button-group {
+    display: flex;
+    gap: 15px; /* Rendu button-um naduvula space */
+    margin-top: 10px;
+}
+
 /* Login Button */
 .login-btn {
-    width: 100%;
+    flex: 1; /* Rendu button-um equal size-a iruka */
     padding: 14px;
     background-color: #7b2c86;
     color: white;
@@ -112,9 +116,27 @@ body {
     font-weight: bold;
     cursor: pointer;
     transition: 0.3s;
-    margin-top: 10px;
 }
 
 .login-btn:hover {
     background-color: #5e1f66;
+}
+
+/* 🔥 Sign in Button (Puthusa add panniruken) */
+.signin-btn {
+    flex: 1; /* Rendu button-um equal size-a iruka */
+    padding: 14px;
+    background-color: transparent; /* Vellai background */
+    color: #7b2c86; /* Purple text */
+    border: 2px solid #7b2c86; /* Purple border */
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.signin-btn:hover {
+    background-color: #7b2c86;
+    color: white;
 }
