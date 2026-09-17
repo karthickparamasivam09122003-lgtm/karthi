@@ -3,23 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Bank - Sign In</title>
-    <!-- CSS file ah link panrom -->
+    <title>My Bank - Login</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <!-- Mela "Sign In" Heading -->
-    <h1 class="page-title">Sign In</h1>
 
     <div class="login-container">
         
         <!-- Left Side: Logos -->
         <div class="left-side">
-            <!-- Unga rendu image-um inga podunga -->
-            <!-- Gap varanum na, images-ku separate class kuduthuruken -->
-            <img src="images/mybank-icon.png" alt="Bank Icon" class="bank-icon">
-            <img src="images/mybank-text.png" alt="My Bank Logo" class="text-logo">
+            <!-- Rendu image-um otti otti iruka class kuduthuruken -->
+            <div class="logo-group">
+                <img src="mybank-icon.png" alt="Bank Icon" class="bank-icon">
+                <img src="mybank-text.png" alt="My Bank Logo" class="text-logo">
+            </div>
         </div>
 
         <!-- Right Side: Login Form -->
@@ -34,6 +31,12 @@
                 <div class="input-group">
                     <label for="password">Password</label>
                     <input type="password" id="password" placeholder="Enter your Password" required>
+                </div>
+
+                <!-- Puthusa Sign in field add panniten -->
+                <div class="input-group">
+                    <label for="signin">Sign in</label>
+                    <input type="text" id="signin" placeholder="Enter Sign in details" required>
                 </div>
 
                 <button type="submit" class="login-btn">Login</button>

@@ -11,25 +11,15 @@ body {
     background-color: #7b2c86; 
     height: 100vh;
     display: flex;
-    flex-direction: column; /* Mela heading irukka */
     justify-content: center;
     align-items: center;
-}
-
-/* Mela "Sign In" Title */
-.page-title {
-    color: white;
-    font-size: 32px;
-    margin-bottom: 20px; /* Login box-ku mela space */
-    text-align: center;
-    letter-spacing: 1px;
 }
 
 /* Main Container Box */
 .login-container {
     display: flex;
     width: 900px;
-    height: 550px;
+    height: 600px; /* Height konjam kootiruken, Sign in field ku space venum */
     background-color: white;
     border-radius: 15px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
@@ -39,27 +29,30 @@ body {
 /* Left Side - Logos Area */
 .left-side {
     flex: 1;
-    background-color: #f3e5f5; /* Light purple tint */
+    background-color: #f3e5f5; 
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 40px;
     border-right: 1px solid #ddd;
 }
 
-/* Left side la irukura images-ku gap */
-.left-side img {
-    max-width: 100%;
+/* Ithu thaan Icon and Text-a otti otti vaika help pannum */
+.logo-group {
+    display: flex;
+    flex-direction: column; /* Nera keezha vaika */
+    align-items: center;    /* Center la vaika */
+    gap: 5px;              /* Rendu image-um otti otti iruka (space kammiya) */
 }
 
-.bank-icon {
-    width: 120px;
-    margin-bottom: 40px; /* Icon and Text naduvula gap */
-}
-
+/* Text Logo Image size control */
 .text-logo {
     width: 250px; 
+}
+
+/* Bank Icon Image size control */
+.bank-icon {
+    width: 100px;
 }
 
 /* Right Side - Login Form Area */
@@ -68,22 +61,20 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 60px; /* Form-ku nalla padding */
+    padding: 50px;
     background-color: white;
 }
 
 .right-side h2 {
     color: #7b2c86;
     margin-bottom: 30px;
-    text-align: center; /* Login heading center la */
+    text-align: center;
     font-size: 28px;
-    font-weight: bold;
 }
 
 /* Input Fields */
 .input-group {
     margin-bottom: 20px;
-    width: 100%; /* Full width */
 }
 
 .input-group label {
@@ -91,7 +82,6 @@ body {
     margin-bottom: 8px;
     color: #555;
     font-weight: 600;
-    text-align: left; /* Label left align */
 }
 
 .input-group input {
