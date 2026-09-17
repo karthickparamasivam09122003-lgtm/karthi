@@ -47,13 +47,13 @@ body {
 /* Text Logo */
 .text-logo {
     width: 220px; 
-    margin-top: -10px;      /* Text-a konjam mela izhuka (icon kita close aaga) */
+    margin-top: -30px;      /* 🔥 Ithu thaan mukkiyam: Text-a mela izhuthu icon kita otti otti vaikum */
 }
 
 /* Bank Icon */
 .bank-icon {
     width: 100px;
-    margin-bottom: 0;       /* Icon keezha extra space illama */
+    margin-bottom: 0;       
 }
 
 /* Right Side - Login Form Area */
