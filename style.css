@@ -7,51 +7,60 @@
 }
 
 body {
-    /* Purple background color */
-    background-color: #7b2c86; 
+    background-color: #7b2c86; /* Purple Background */
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* Main Container Box */
+/* Main Container */
 .login-container {
     display: flex;
     width: 900px;
-    height: 550px;
+    height: 600px; /* Height konjam kooti iruken */
     background-color: white;
     border-radius: 15px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
     overflow: hidden;
 }
 
-/* Left Side - Logos Area */
+/* =========================================
+   LEFT SIDE (Logo & Icon Section)
+   ========================================= */
 .left-side {
     flex: 1;
-    background-color: #f3e5f5; /* Light purple tint */
+    background-color: #f3e5f5; /* Light purple background */
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: column; /* Vertical-a varum */
+    justify-content: center; /* Center la set aagum */
     align-items: center;
+    
+    /* ⭐ Mukkiyam: Icon kum Text kum naduvula Gap (Space) */
+    gap: 40px; 
+    
     padding: 40px;
     border-right: 1px solid #ddd;
 }
 
 .left-side img {
     max-width: 100%;
-    margin-bottom: 20px;
+    height: auto;
 }
 
+/* Text Logo (MY BANK) Size */
 .text-logo {
-    width: 250px; 
+    width: 260px; 
 }
 
+/* Bank Icon Size */
 .bank-icon {
-    width: 120px;
+    width: 130px;
 }
 
-/* Right Side - Login Form Area */
+/* =========================================
+   RIGHT SIDE (Login Form Section)
+   ========================================= */
 .right-side {
     flex: 1;
     display: flex;
@@ -63,21 +72,22 @@ body {
 
 .right-side h2 {
     color: #7b2c86;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
     text-align: center;
-    font-size: 28px;
+    font-size: 30px;
 }
 
 /* Input Fields */
 .input-group {
-    margin-bottom: 20px;
+    margin-bottom: 18px; /* Fields kum naduvula space */
 }
 
 .input-group label {
     display: block;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
     color: #555;
     font-weight: 600;
+    font-size: 15px;
 }
 
 .input-group input {
