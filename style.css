@@ -18,7 +18,7 @@ body {
 .login-container {
     display: flex;
     width: 900px;
-    height: 620px; /* Konjam height kootiruken, 3 fields ku */
+    height: 620px;
     background-color: white;
     border-radius: 15px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
@@ -72,7 +72,7 @@ body {
 
 /* Input Fields */
 .input-group {
-    margin-bottom: 18px; /* Konjam kammi panniruken */
+    margin-bottom: 18px;
 }
 
 .input-group label {

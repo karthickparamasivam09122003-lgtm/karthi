@@ -21,7 +21,7 @@
         <!-- Right Side: Register Form -->
         <div class="right-side">
             <h2>Sign In</h2>
-            <form>
+            <form id="registerForm">
                 <div class="input-group">
                     <label for="new-userid">User ID</label>
                     <input type="text" id="new-userid" placeholder="Create your User ID" required>
@@ -32,22 +32,22 @@
                     <input type="password" id="new-password" placeholder="Create your Password" required>
                 </div>
 
-                <!-- 🔥 Puthusa Confirm Password field -->
                 <div class="input-group">
                     <label for="confirm-password">Confirm Password</label>
                     <input type="password" id="confirm-password" placeholder="Confirm your Password" required>
                 </div>
 
-                <!-- Rendu button-um -->
                 <div class="button-group">
                     <button type="submit" class="login-btn">Submit</button>
-                    <!-- 🔥 Login click panna thirumba index.html ku varum -->
                     <button type="button" class="signin-btn" onclick="window.location.href='index.html'">Login</button>
                 </div>
             </form>
         </div>
 
     </div>
+
+    <!-- 🔥 JavaScript file link -->
+    <script src="script.js"></script>
 
 </body>
 </html>
