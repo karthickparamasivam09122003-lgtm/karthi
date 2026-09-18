@@ -15,26 +15,63 @@ document.getElementById("registerForm").addEventListener("submit", function(even
         return;
     }
 
-    // 4. Data-va CSV format la maathuka (Excel la open pannalama)
-    let csvContent = "User ID,Password\n"; // Header row
-    csvContent += userId + "," + password + "\n"; // Data row
-
-    // 5. Oru file (Blob) create panni download panna
-    let blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
-    let link = document.createElement("a");
-    let url = URL.createObjectURL(blob);
-    
-    link.setAttribute("href", url);
-    link.setAttribute("download", "users.csv"); // File peru users.csv
-    link.style.visibility = 'hidden';
-    
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-
-    // 6. User-ku alert kaatu
-    alert("Success! Data saved to users.csv. Ithu unga Downloads folder la irukum. Adha Excel la open pannunga.");
-
-    // 7. Form-a clear panna
-    document.getElementById("registerForm").reset();
+    // 4. users.xlsx file-a fetch panni read panna
+    fetch('users.xlsx')
+        .then(response => response.arrayBuffer())
+        .then(data => {
+            // 5. Excel file-a workbook-a maathuka
+            let workbook = XLSX.read(data, { type: 'array' });
+            
+            // 6. First sheet-a eduka
+            let sheetName = workbook.SheetNames[0];
+            let worksheet = workbook.Sheets[sheetName];
+            
+            // 7. Excel data-va JSON-a maathuka
+            let jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1 });
+            
+            // 8. Puthu data-va add panna
+            // Header row (User ID, Password) already irundha, adha skip pannum
+            if (jsonData.length === 0) {
+                // File khaali-ya irundha, header add pannum
+                jsonData.push(["User ID", "Password"]);
+            }
+            
+            // Puthu row add pannum
+            jsonData.push([userId, password]);
+            
+            // 9. JSON data-va thirumba worksheet-a maathuka
+            let newWorksheet = XLSX.utils.aoa_to_sheet(jsonData);
+            
+            // 10. Workbook la update pannum
+            workbook.Sheets[sheetName] = newWorksheet;
+            
+            // 11. Puthu Excel file-a write panni download pannum
+            XLSX.writeFile(workbook, "users.xlsx");
+            
+            // 12. User-ku alert kaatu
+            alert("Success! Data saved to users.xlsx. Adha Excel la open pannunga.");
+            
+            // 13. Form-a clear panna
+            document.getElementById("registerForm").reset();
+        })
+        .catch(error => {
+            // File illama pona, puthu file create pannum
+            console.log("File illa, puthu file create panren...");
+            
+            // Puthu workbook create pannum
+            let workbook = XLSX.utils.book_new();
+            let jsonData = [
+                ["User ID", "Password"],
+                [userId, password]
+            ];
+            
+            let newWorksheet = XLSX.utils.aoa_to_sheet(jsonData);
+            XLSX.utils.book_append_sheet(workbook, newWorksheet, "Users");
+            
+            // Puthu file-a download pannum
+            XLSX.writeFile(workbook, "users.xlsx");
+            
+            alert("Puthu users.xlsx file create panniten! Adha Excel la open pannunga.");
+            document.getElementById("registerForm").reset();
+        });
 });
